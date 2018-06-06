@@ -6,4 +6,5 @@ const jwtClient = new google.auth.JWT({
     key: key.private_key,
     scopes: ["https://www.googleapis.com/auth/cloud-platform"]
 });
+
 google.options({auth: jwtClient, project: process.env.GCLOUD_PROJECT_ID});
