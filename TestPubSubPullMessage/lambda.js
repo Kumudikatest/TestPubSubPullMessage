@@ -7,7 +7,7 @@ exports.handler = function (event, context, callback) {
 		subscription: `projects/${process.env.GCLOUD_PROJECT_ID}/subscriptions/firstNlastN`,
 		resource: {
 			maxMessages: 10,
-			returnImmediately: false,
+			returnImmediately: true,
 		}
 	})
 		.then(response => {
