@@ -4,7 +4,7 @@ let google = require('googleapis').google;
 const pubsub = google.pubsub('v1');
 exports.handler = function (event, context, callback) {
 	pubsub.projects.subscriptions.pull({
-		subscription: `projects/${process.env.GCLOUD_PROJECT_ID}/subscriptions/firstNlastN`,
+		subscription: `projects/${process.env.GCLOUD_PROJECT_ID}/subscriptions/receiver`,
 		resource: {
 			maxMessages: 10,
 			returnImmediately: true,
